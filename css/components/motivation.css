@@ -1,0 +1,71 @@
+.motivation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.motivation .motivation__content {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.motivation__content .motivation__text {
+  max-width: 62rem;
+  min-width: 20rem;
+}
+
+.motivation__text h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: var(--text-color-red);
+}
+
+.motivation__text p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.6rem;
+  text-align: justify;
+}
+
+.motivation__content .motimation__image img {
+  height: 380px;
+}
+
+/* ===================================================== */
+
+/* Medias */
+
+/* Celular deitado */
+@media only screen and (max-width: 320px) {
+  .motivation .motivation__text p {
+    padding: 0rem 1rem;
+    text-align: center;
+  }
+
+  .motivation__text h5 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+}
+
+/* Celular deitado */
+@media only screen and (max-width: 425px) {
+  .motivation .motivation__content {
+    flex-direction: column-reverse;
+  }
+}
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
+  .motivation__text p {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .motivation__content .motimation__image img {
+    height: 280px;
+  }
+}

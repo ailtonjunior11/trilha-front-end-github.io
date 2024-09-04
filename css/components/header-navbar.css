@@ -1,0 +1,157 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  background-color: var(--text-color-white);
+  box-shadow: 0 -5px 10px var(--text-color-black);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding-inline: 3rem;
+  margin-inline: auto;
+}
+
+.navbar .logo h1 {
+  color: var(--text-color-black);
+  font-size: 1.3rem;
+  font-weight: 700;
+  cursor: default;
+}
+
+.navbar .logo h1 span {
+  color: var(--text-color-red);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.navbar .nav__list {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+}
+
+.navbar .nav__list li a {
+  color: var(--text-color-black-2);
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: 0.2s;
+  padding-block: 1rem;
+}
+
+.navbar ul li a:hover {
+  color: var(--text-color-black);
+}
+
+.burger__menu {
+  display: none;
+  border: none;
+  background: none;
+  border-top: solid 3px var(--text-color-black);
+  cursor: pointer;
+}
+
+.burger__menu::before,
+.burger__menu::after {
+  content: " ";
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin-top: 4px;
+  background-color: var(--text-color-black);
+  position: relative;
+  transition: 0.2s;
+}
+
+/* =================================== */
+
+/* Medias */
+
+/* Celular deitado */
+@media only screen and (max-width: 425px) {
+  .navbar .logo h1 {
+    display: none;
+  }
+
+  .navbar .nav__list {
+    width: 105vw;
+  }
+}
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
+  /* Config menu */
+  .burger__menu {
+    display: block;
+    z-index: 100;
+  }
+
+  .navbar .nav__list {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 55vh;
+    width: 100%;
+    background-color: var(--text-color-white);
+    box-shadow: 0 5px 20px var(--text-color-black);
+    clip-path: circle(80px at 90% -15%);
+    transition: 1s ease-out;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0;
+    pointer-events: none;
+  }
+
+  .nav__list a {
+    font-size: 24px;
+    opacity: 0;
+  }
+
+  .nav__list li:nth-child(1) a {
+    transition: 0.5s 0.2s;
+  }
+
+  .nav__list li:nth-child(2) a {
+    transition: 0.5s 0.4s;
+  }
+
+  .nav__list li:nth-child(3) a {
+    transition: 0.5s 0.6s;
+  }
+
+  .nav__list li:nth-child(4) a {
+    transition: 0.5s 0.8s;
+  }
+
+  /* Config lista ativos */
+  .navbar.active .nav__list {
+    clip-path: circle(1500px at 90% -15%);
+    pointer-events: all;
+  }
+
+  .navbar.active .nav__list a {
+    opacity: 1;
+  }
+
+  .navbar.active .burger__menu {
+    position: fixed;
+    top: 26px;
+    right: 3rem;
+    border-top-color: transparent;
+  }
+
+  .navbar.active .burger__menu::before {
+    transform: rotate(135deg);
+  }
+
+  .navbar.active .burger__menu::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+}

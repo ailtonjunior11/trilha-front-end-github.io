@@ -1,0 +1,70 @@
+.likes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5rem;
+  background-color: var(--color-of-content);
+}
+
+.likes h3 {
+  font-size: 1.88rem;
+  font-weight: 600;
+  margin-top: -2rem;
+  color: var(--text-color-white);
+}
+
+.likes .likes__content {
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+}
+
+.likes__content .content__box {
+  padding: 3rem 2rem;
+  border-radius: 0.5rem;
+  background-color: var(--background-color-white);
+  color: var(--text-color-red);
+}
+
+.likes .content__box p {
+  font-weight: 600;
+}
+
+.likes .content__box p strong {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
+  .likes .likes__content {
+    gap: 2rem;
+  }
+
+  .likes__content .content__box {
+    padding: 0.5rem 1rem;
+  }
+
+  .likes .content__box p {
+    font-weight: 400;
+  }
+}
+
+/* Celular deitado */
+@media only screen and (max-width: 425px) {
+  .likes .likes__content {
+    flex-direction: column;
+  }
+}
+
+/* Celular em pé */
+@media only screen and (max-width: 320px) {
+  .likes h3 {
+    font-size: 1.7rem;
+  }
+
+  .likes__content .content__box p {
+    text-align: center;
+  }
+}

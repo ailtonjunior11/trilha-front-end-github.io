@@ -1,0 +1,9 @@
+@import "./global.css";
+@import "./viriables.css";
+
+@import "./components/about.css";
+@import "./components/footer.css";
+@import "./components/header-navbar.css";
+@import "./components/home.css";
+@import "./components/likes.css";
+@import "./components/motivation.css";
