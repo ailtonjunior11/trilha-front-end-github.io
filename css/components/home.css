@@ -16,19 +16,19 @@
 .home .container__left .text__container h2 {
   font-size: 3.2rem;
   font-weight: 700;
-  color: var(--text-color-red);
+  color: var(--text-color-black);
 }
 
 .home .container__left .text__container p {
   font-size: 1.4rem;
   font-weight: 500;
-  color: var(--text-color-red-2);
+  color: var(--text-color-black-2);
 }
 
 .home .container__left .text__container .dev {
   font-size: 1.7rem;
   font-weight: 600;
-  color: var(--text-color-red);
+  color: var(--text-color-black);
 }
 
 .home .container__left .btn a {
@@ -40,13 +40,13 @@
   -webkit-transition: ease-out 0.4s;
   -moz-transition: ease-out 0.4s;
   transition: ease-out 0.4s;
-  border: solid 1px var(--color-of-content);
-  box-shadow: inset 0 0 0 0 var(--color-of-content);
-  color: var(--text-color-red);
+  border: solid 1px var(--text-color-black);
+  box-shadow: inset 0 0 0 0 var(--text-color-black-2);
+  color: var(--text-color-black);
 }
 
 .home .container__left .btn a:hover {
-  box-shadow: inset 170px 0 0 0 var(--color-of-content);
+  box-shadow: inset 170px 0 0 0 var(--text-color-black-2);
   color: var(--text-color-white);
 }
 
